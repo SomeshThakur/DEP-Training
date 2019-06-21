@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode=production",
-    "start": "webpack-dev-server --open --hot"
+    "start": "webpack-dev-server --open --hot",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -17,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/SomeshThakur/DEP-Training/issues"
   },
-  "homepage": "https://github.com/SomeshThakur/DEP-Training#readme",
+  "homepage": "https://someshthakur.github.io/DEP-Training/",
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
@@ -36,5 +38,7 @@
     "webpack-dev-server": "^3.7.1",
     "whatwg-fetch": "^3.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "gh-pages": "^2.0.1"
+  }
 }
