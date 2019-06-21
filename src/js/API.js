@@ -22,7 +22,7 @@ export class API {
 
         endpoints.getById = async (id, uid_name) => {
             if (uid_name === undefined) uid_name = 'unique_id';
-            const res = await fetch(`${resourceURL}?${uid_name}=${id}?apikey=${this.apiKey}`);
+            const res = await fetch(`${resourceURL}?${uid_name}=${id}&apikey=${this.apiKey}`);
             return await res.json();
         }
         return endpoints;
