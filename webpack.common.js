@@ -1,6 +1,6 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
-const path = require('path')
+
 module.exports = {
     entry: [
         'whatwg-fetch',
@@ -11,17 +11,11 @@ module.exports = {
         rules: [
             {
                 test: /\.js$/,
-                // include: [path.resolve(__dirname, "src")],
                 exclude: /node_modules/,
                 loader: "babel-loader",
                 options: {
                     presets: ["@babel/preset-env"],
                 }
-
-            },
-            {
-                test: /\.html$/,
-                loader: "html-loader",
             },
             {
 
